@@ -1,0 +1,27 @@
+*ReSharper*
+*ReSharper*
+*.user
+*.suo
+*.dotCover
+*.log
+*.bak
+*.DotSettings
+*.docstates
+*.cache
+TestResult.xml
+obj
+bin
+logs
+Gemfile.lock
+
+# Nuget
+.nuget/*
+!.nuget/NuGet.targets
+packages/*
+
+# configs
+Web.config
+App.config
+*.*.config
+!*.template.config
+!*.settings.json
