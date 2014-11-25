@@ -15,7 +15,6 @@ logs
 Gemfile.lock
 
 # Nuget
-.nuget/*
 !.nuget/NuGet.targets
 packages/*
 
