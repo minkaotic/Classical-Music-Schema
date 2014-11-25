@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace Classical_Music_Schema
 {
-    public class Class1
+    public class Api
     {
-        
+        public static string StatusCode()
+        {
+            return "200";
+        }
     }
 }
