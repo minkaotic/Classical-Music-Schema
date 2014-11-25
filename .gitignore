@@ -21,7 +21,6 @@ packages/*
 
 # configs
 Web.config
-App.config
 *.*.config
 !*.template.config
 !*.settings.json
