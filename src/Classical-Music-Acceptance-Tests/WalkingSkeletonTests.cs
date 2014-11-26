@@ -1,8 +1,7 @@
-﻿using Classical_Music_Schema;
-using System.Net;
+﻿using System.Net;
 using NUnit.Framework;
 
-namespace WalkingSkeleton.Tests
+namespace Classical_Music_Acceptance_Tests
 {
     [TestFixture]
     public class WalkingSkeletonTests
@@ -10,12 +9,12 @@ namespace WalkingSkeleton.Tests
         [Test]
         public void It_should_return_a_status_code_of_200()
         {
-            var url = "http://localhost:52343/";
+            var url = "http://localhost:57894/";
             var request = WebRequest.Create(url);
             var response = request.GetResponse();
 
-            Assert.That(((HttpWebResponse)response).StatusCode,Is.EqualTo(HttpStatusCode.OK));
-            
+            Assert.That(((HttpWebResponse)response).StatusCode, Is.EqualTo(HttpStatusCode.OK));
+
         }
     }
 }

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("WalkingSkeleton.Tests")]
+[assembly: AssemblyTitle("Classical-Music-Specs")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("WalkingSkeleton.Tests")]
+[assembly: AssemblyProduct("Classical-Music-Specs")]
 [assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("71924354-7af3-43d3-80cd-f60a6ff2a76e")]
+[assembly: Guid("298830bb-d90f-4722-954e-0e34967c0653")]
 
 // Version information for an assembly consists of the following four values:
 //

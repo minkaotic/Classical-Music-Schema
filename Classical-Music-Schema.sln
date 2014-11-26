@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classical-Music-Main", "src\Classical-Music-Main\Classical-Music-Main.csproj", "{D52ABB5E-6B45-42EB-9B54-5ABD23D58632}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classical-Music-Nancy", "src\Classical-Music-Nancy\Classical-Music-Nancy.csproj", "{887A8565-4A10-44C8-82EF-F2F2D1D2BFBF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classical-Music-Unit-Tests", "src\Classical-Music-Unit-Tests\Classical-Music-Unit-Tests.csproj", "{6B09AFBF-AFDE-4F9C-960A-EBAF0496C244}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classical-Music-Integration-Tests", "src\Classical-Music-Integration-Tests\Classical-Music-Integration-Tests.csproj", "{E53415EA-1F34-46B1-99F0-871DF027155A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classical-Music-Acceptance-Tests", "src\Classical-Music-Acceptance-Tests\Classical-Music-Acceptance-Tests.csproj", "{6C5DFA81-BFDD-4E58-A49D-07DCDC52A811}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{CBC5D7DA-1BD4-4971-BCE2-CFC23F6474DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classical-Music-Specs", "src\Classical-Music-Specs\Classical-Music-Specs.csproj", "{88756C7A-C848-4385-9071-E6FD8DA0BFE3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D52ABB5E-6B45-42EB-9B54-5ABD23D58632}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D52ABB5E-6B45-42EB-9B54-5ABD23D58632}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D52ABB5E-6B45-42EB-9B54-5ABD23D58632}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D52ABB5E-6B45-42EB-9B54-5ABD23D58632}.Release|Any CPU.Build.0 = Release|Any CPU
+		{887A8565-4A10-44C8-82EF-F2F2D1D2BFBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{887A8565-4A10-44C8-82EF-F2F2D1D2BFBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{887A8565-4A10-44C8-82EF-F2F2D1D2BFBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{887A8565-4A10-44C8-82EF-F2F2D1D2BFBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B09AFBF-AFDE-4F9C-960A-EBAF0496C244}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B09AFBF-AFDE-4F9C-960A-EBAF0496C244}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B09AFBF-AFDE-4F9C-960A-EBAF0496C244}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B09AFBF-AFDE-4F9C-960A-EBAF0496C244}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E53415EA-1F34-46B1-99F0-871DF027155A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E53415EA-1F34-46B1-99F0-871DF027155A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E53415EA-1F34-46B1-99F0-871DF027155A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E53415EA-1F34-46B1-99F0-871DF027155A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C5DFA81-BFDD-4E58-A49D-07DCDC52A811}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C5DFA81-BFDD-4E58-A49D-07DCDC52A811}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C5DFA81-BFDD-4E58-A49D-07DCDC52A811}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C5DFA81-BFDD-4E58-A49D-07DCDC52A811}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88756C7A-C848-4385-9071-E6FD8DA0BFE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88756C7A-C848-4385-9071-E6FD8DA0BFE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88756C7A-C848-4385-9071-E6FD8DA0BFE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88756C7A-C848-4385-9071-E6FD8DA0BFE3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6C5DFA81-BFDD-4E58-A49D-07DCDC52A811} = {CBC5D7DA-1BD4-4971-BCE2-CFC23F6474DE}
+		{E53415EA-1F34-46B1-99F0-871DF027155A} = {CBC5D7DA-1BD4-4971-BCE2-CFC23F6474DE}
+		{6B09AFBF-AFDE-4F9C-960A-EBAF0496C244} = {CBC5D7DA-1BD4-4971-BCE2-CFC23F6474DE}
+		{88756C7A-C848-4385-9071-E6FD8DA0BFE3} = {CBC5D7DA-1BD4-4971-BCE2-CFC23F6474DE}
+	EndGlobalSection
+EndGlobal
