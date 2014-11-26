@@ -8,15 +8,15 @@ using NUnit.Framework;
 namespace Classical_Music_Integration_Tests
 {
     [TestFixture]
-    public class CatsAreCatsTest
+    public class MiceAreMiceTest
     {
         [Test]
-        public void A_cat_is_a_cat()
+        public void A_mouse_is_a_mouse()
         {
-            string cat1 = "cat";
-            string cat2 = "cat";
+            string mouse1 = "mouse";
+            string mouse2 = "mouse";
 
-            Assert.That(cat1, Is.EqualTo(cat2));
+            Assert.That(mouse1, Is.EqualTo(mouse2));
         }
     }
 }
