@@ -9,7 +9,7 @@ namespace Classical_Music_Acceptance_Tests
         [Test]
         public void It_should_return_a_status_code_of_200()
         {
-            var url = "http://localhost:57894/";
+            var url = "http://classical-api.svc.7d/status";
             var request = WebRequest.Create(url);
             var response = request.GetResponse();
 
