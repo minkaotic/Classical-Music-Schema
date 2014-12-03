@@ -15,6 +15,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{CBC5D7DA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classical-Music-Specs", "src\Classical-Music-Specs\Classical-Music-Specs.csproj", "{88756C7A-C848-4385-9071-E6FD8DA0BFE3}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{BDCACE0C-EDBD-40C4-A654-4A5CF835270E}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,8 +57,8 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{6C5DFA81-BFDD-4E58-A49D-07DCDC52A811} = {CBC5D7DA-1BD4-4971-BCE2-CFC23F6474DE}
 		{E53415EA-1F34-46B1-99F0-871DF027155A} = {CBC5D7DA-1BD4-4971-BCE2-CFC23F6474DE}
+		{6C5DFA81-BFDD-4E58-A49D-07DCDC52A811} = {CBC5D7DA-1BD4-4971-BCE2-CFC23F6474DE}
 		{6B09AFBF-AFDE-4F9C-960A-EBAF0496C244} = {CBC5D7DA-1BD4-4971-BCE2-CFC23F6474DE}
 		{88756C7A-C848-4385-9071-E6FD8DA0BFE3} = {CBC5D7DA-1BD4-4971-BCE2-CFC23F6474DE}
 	EndGlobalSection

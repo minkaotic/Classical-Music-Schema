@@ -1,5 +1,4 @@
 *ReSharper*
-*ReSharper*
 *.user
 *.suo
 *.dotCover
@@ -12,14 +11,6 @@ TestResult.xml
 obj
 bin
 logs
-Gemfile.lock
 
-# Nuget
-!.nuget/NuGet.targets
 packages/*
-
-# configs
-Web.config
-*.*.config
-!*.template.config
-!*.settings.json
+.nuget/NuGet.exe
