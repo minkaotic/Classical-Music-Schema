@@ -1,5 +1,7 @@
-﻿using System.Net;
+﻿using System;
+using System.Net;
 using NUnit.Framework;
+using Neo4jClient;
 
 namespace Classical_Music_Acceptance_Tests
 {
@@ -15,6 +17,13 @@ namespace Classical_Music_Acceptance_Tests
 
             Assert.That(((HttpWebResponse)response).StatusCode, Is.EqualTo(HttpStatusCode.OK));
 
+        }
+
+        [Test]
+        public void It_should_connect_to_the_database()
+        {
+            var client = new GraphClient(new Uri("http://localhost:7474/db/data"));
+            client.Connect();
         }
     }
 }
