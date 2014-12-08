@@ -22,8 +22,10 @@ namespace Classical_Music_Acceptance_Tests
         [Test]
         public void It_should_connect_to_the_database()
         {
-            var client = new GraphClient(new Uri("http://localhost:7474/db/data"));
+            var client = new GraphClient(new Uri("http://10.120.17.75:7474/db/data"));
             client.Connect();
+
+
         }
     }
 }
