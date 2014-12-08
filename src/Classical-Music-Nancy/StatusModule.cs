@@ -6,7 +6,12 @@ namespace Classical_Music_Nancy
     {
         public StatusModule()
         {
-            Get["/status"] = parameters => "Hello World";
+            Get["/status"] = parameters => HelloWorld();
+        }
+
+        private static string HelloWorld()
+        {
+            return "Hello World";
         }
     }
 }
