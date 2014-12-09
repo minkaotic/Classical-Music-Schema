@@ -14,7 +14,7 @@ namespace Classical_Music_Integration_Tests
         }
 
         [Test]
-        public void It_can_not_connect_to_non_existant_database()
+        public void It_cannot_connect_to_non_existant_database()
         {
             var databaseConnection = new DatabaseConnection("http://10.120.17.75:7475/db/data");
             Assert.That(databaseConnection.ConnectToDB(), Is.False);

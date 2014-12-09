@@ -11,9 +11,9 @@ namespace Classical_Music_Acceptance_Tests
         [Test]
         public void It_should_return_Database_online()
         {
-            var url = ConfigurationManager.AppSettings["RootUrl"] + "/status";
-            var request = WebRequest.Create(url);
-            var response = request.GetResponse();
+            string url = ConfigurationManager.AppSettings["RootUrl"] + "/status";
+            WebRequest request = WebRequest.Create(url);
+            WebResponse response = request.GetResponse();
             string responseText;
 
             using (var reader = new System.IO.StreamReader(response.GetResponseStream(), ASCIIEncoding.ASCII))
