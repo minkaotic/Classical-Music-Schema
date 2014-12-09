@@ -1,10 +1,7 @@
-﻿using System;
-using System.Configuration;
-using System.IO;
+﻿using System.Configuration;
 using System.Net;
 using System.Text;
 using NUnit.Framework;
-using Neo4jClient;
 
 namespace Classical_Music_Acceptance_Tests
 {

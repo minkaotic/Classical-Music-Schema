@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Classical_Music_Nancy;
+﻿using Classical_Music_Nancy;
 using NUnit.Framework;
 
 namespace Classical_Music_Integration_Tests

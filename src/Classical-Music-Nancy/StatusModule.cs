@@ -1,6 +1,4 @@
-﻿using System;
-using Nancy;
-using Neo4jClient;
+﻿using Nancy;
 
 namespace Classical_Music_Nancy
 {
