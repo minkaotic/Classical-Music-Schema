@@ -23,7 +23,7 @@ namespace Classical_Music_Acceptance_Tests
                 responseText = reader.ReadToEnd();
             }
     
-            Assert.That(responseText, Is.EqualTo("Database: ONLINE"));
+            Assert.That(responseText, Is.StringContaining("Database: ONLINE"));
         }
     }
 }
