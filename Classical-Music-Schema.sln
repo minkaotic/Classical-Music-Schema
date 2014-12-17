@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classical-Music-Main", "src\Classical-Music-Main\Classical-Music-Main.csproj", "{D52ABB5E-6B45-42EB-9B54-5ABD23D58632}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classical-Music-Nancy", "src\Classical-Music-Nancy\Classical-Music-Nancy.csproj", "{887A8565-4A10-44C8-82EF-F2F2D1D2BFBF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classical-Music-Unit-Tests", "src\Classical-Music-Unit-Tests\Classical-Music-Unit-Tests.csproj", "{6B09AFBF-AFDE-4F9C-960A-EBAF0496C244}"
@@ -28,10 +26,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D52ABB5E-6B45-42EB-9B54-5ABD23D58632}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D52ABB5E-6B45-42EB-9B54-5ABD23D58632}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D52ABB5E-6B45-42EB-9B54-5ABD23D58632}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D52ABB5E-6B45-42EB-9B54-5ABD23D58632}.Release|Any CPU.Build.0 = Release|Any CPU
 		{887A8565-4A10-44C8-82EF-F2F2D1D2BFBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{887A8565-4A10-44C8-82EF-F2F2D1D2BFBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{887A8565-4A10-44C8-82EF-F2F2D1D2BFBF}.Release|Any CPU.ActiveCfg = Release|Any CPU

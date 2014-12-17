@@ -7,12 +7,12 @@ using NUnit.Framework;
 namespace Classical_Music_Acceptance_Tests
 {
     [TestFixture]
-    public class StatusEndpointTests
+    class ReleaseInfoTests
     {
         [Test]
-        public void It_should_return_Database_online()
+        public void It_returns_a_release_title()
         {
-            string url = ConfigurationManager.AppSettings["RootUrl"] + "/status";
+            string url = ConfigurationManager.AppSettings["RootUrl"] + "/release/1";
             WebRequest request = WebRequest.Create(url);
             WebResponse response = request.GetResponse();
             string responseText;
@@ -21,8 +21,10 @@ namespace Classical_Music_Acceptance_Tests
             {
                 responseText = reader.ReadToEnd();
             }
-    
-            Assert.That(responseText, Is.StringContaining("Database: ONLINE"));
+
+            Assert.That(responseText, Is.StringContaining(@"""release_title"": ""Mahler: Symphony No. 1"""));
         }
     }
 }
+
+
