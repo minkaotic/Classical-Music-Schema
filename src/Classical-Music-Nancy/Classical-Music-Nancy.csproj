@@ -93,8 +93,8 @@
   <ItemGroup>
     <Compile Include="DatabaseConnection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReleaseInfoModule.cs" />
-    <Compile Include="StatusModule.cs" />
+    <Compile Include="ReleasePageModule.cs" />
+    <Compile Include="StatusPageModule.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
