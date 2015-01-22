@@ -12,7 +12,7 @@ namespace Classical_Music_Nancy
             _dbUrl = dbUrl;
         }
 
-        public bool ConnectToDB()
+        public bool ConnectToDb()
         {            
             try
             {

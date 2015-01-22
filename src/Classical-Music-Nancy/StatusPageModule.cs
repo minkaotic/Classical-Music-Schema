@@ -13,10 +13,11 @@ namespace Classical_Music_Nancy
 
         private static string RenderStatusPage()
         {
-            var newline = "<p/>";
             var databaseConnection = new DatabaseConnection("http://10.120.17.75:7474/db/data");
-            if (databaseConnection.ConnectToDB())
-                return DbOnline() + newline + OutputVersionNumber();
+            if (databaseConnection.ConnectToDb())
+            {
+                return DbOnline() + "<p/>" + OutputVersionNumber();
+            }
             else
                 return DbNotFound();
         }
@@ -25,15 +26,15 @@ namespace Classical_Music_Nancy
         {
             return "Version: " + Assembly.GetExecutingAssembly().GetName().Version;
         }
+        
+        private static string DbOnline()
+        {
+            return "Database: ONLINE";
+        }
 
         private static string DbNotFound()
         {
             return "Database: NOT FOUND";
-        }
-
-        private static string DbOnline()
-        {
-            return "Database: ONLINE";
         }
     }
 }
