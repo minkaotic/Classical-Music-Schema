@@ -1,4 +1,5 @@
 ﻿using Classical_Music_Nancy;
+using Classical_Music_Nancy.Database;
 using NUnit.Framework;
 
 namespace Classical_Music_Integration_Tests
@@ -11,7 +12,7 @@ namespace Classical_Music_Integration_Tests
         [TestFixtureSetUp]
         public void Set_up()
         {
-            _release = Database.GetFromDb();
+            _release = ReleaseData.GetFromDb();
         }
 
         [Test]

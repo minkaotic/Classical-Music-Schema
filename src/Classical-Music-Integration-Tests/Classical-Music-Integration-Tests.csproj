@@ -65,9 +65,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Classical-Music-Nancy\Classical-Music-Nancy.csproj">
+    <ProjectReference Include="..\Classical-Music-Nancy\Classical-Music-Api.csproj">
       <Project>{887A8565-4A10-44C8-82EF-F2F2D1D2BFBF}</Project>
-      <Name>Classical-Music-Nancy</Name>
+      <Name>Classical-Music-Api</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

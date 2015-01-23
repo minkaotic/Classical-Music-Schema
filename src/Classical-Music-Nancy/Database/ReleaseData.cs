@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using Neo4jClient;
 
-namespace Classical_Music_Nancy
+namespace Classical_Music_Nancy.Database
 {
-    public class Database
+    public class ReleaseData
     {
-        private const string _dbUri = "http://10.120.17.75:7474/db/data";
+        private static string _dbUri = "http://10.120.17.75:7474/db/data";
 
         public static Release GetFromDb()
         {
@@ -26,7 +24,7 @@ namespace Classical_Music_Nancy
                 return query.Results.FirstOrDefault();
             }
 
-            throw new Exception("No releases found. DOOM.");
+            throw new Exception("No releases found in databse.");
         }
     }
 }

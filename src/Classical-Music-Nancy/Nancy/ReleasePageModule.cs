@@ -1,8 +1,4 @@
-﻿using System;
-using System.Linq;
-using Nancy;
-using Neo4jClient;
-using Neo4jClient.Cypher;
+﻿using Nancy;
 using Newtonsoft.Json;
 
 namespace Classical_Music_Nancy
@@ -27,6 +23,8 @@ namespace Classical_Music_Nancy
     {
         [JsonProperty(PropertyName = "title")]
         public string Title { get; set; }
+
+        
 
     }
 
