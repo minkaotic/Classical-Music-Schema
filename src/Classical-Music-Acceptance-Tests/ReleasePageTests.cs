@@ -1,11 +1,7 @@
-﻿using System;
-using System.Configuration;
-using System.Linq;
+﻿using System.Configuration;
 using System.Net;
 using System.Text;
-using Classical_Music_Nancy;
 using NUnit.Framework;
-using Neo4jClient;
 
 namespace Classical_Music_Acceptance_Tests
 {
@@ -26,7 +22,7 @@ namespace Classical_Music_Acceptance_Tests
                 responseText = reader.ReadToEnd();
             }
 
-            Assert.That(responseText, Is.StringContaining(@"""release_title"": ""Mahler: Symphony No. 1"""));
+            Assert.That(responseText, Is.StringContaining(@"""title"":""Mahler: Symphony No. 1"""));
         }
     }
 }

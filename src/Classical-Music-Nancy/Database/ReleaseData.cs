@@ -24,7 +24,7 @@ namespace Classical_Music_Nancy.Database
                 return query.Results.FirstOrDefault();
             }
 
-            throw new Exception("No releases found in databse.");
+            throw new Exception("No releases found in database.");
         }
     }
 }

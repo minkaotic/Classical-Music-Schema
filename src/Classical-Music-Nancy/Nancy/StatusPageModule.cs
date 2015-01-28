@@ -8,10 +8,10 @@ namespace Classical_Music_Nancy
 
         public StatusPageModule()
         {
-            Get["/status"] = parameters => RenderStatusPage();            
+            Get["/status"] = parameters => StatusPageResponse();            
         }
 
-        private static string RenderStatusPage()
+        private static string StatusPageResponse()
         {
             var databaseConnection = new DatabaseConnection("http://10.120.17.75:7474/db/data");
             if (databaseConnection.ConnectToDb())

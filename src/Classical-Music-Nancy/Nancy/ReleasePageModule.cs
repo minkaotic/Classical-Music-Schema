@@ -1,31 +1,30 @@
-﻿using Nancy;
+﻿using Classical_Music_Nancy.Database;
+using Nancy;
 using Newtonsoft.Json;
 
 namespace Classical_Music_Nancy
 {
     public class ReleasePageModule : NancyModule
     {
+        private Release _release;
 
         public ReleasePageModule()
         {
-            Get["/release/1"] = parameters => RenderReleasePage();
+            Get["/release/1"] = parameters => ReleaseResponse();
         }
 
-        private static string RenderReleasePage()
+        private Release ReleaseResponse()
         {
-            return "{\n\"release_title\": \"Mahler: Symphony No. 1\"\n}";
+            return ReleaseData.GetFromDb();
         }
     }
 
-    // The below should replace the hardcoded return in RenderReleasePage()
-    // eventually, but isn't working yet.
+
     public class Release
     {
         [JsonProperty(PropertyName = "title")]
         public string Title { get; set; }
-
         
-
     }
 
 }

@@ -22,7 +22,7 @@ namespace Classical_Music_Integration_Tests
             Assert.That(databaseConnection.ConnectToDb(),Is.True);
         }
 
-        [Test]
+        [Test, Ignore("takes too bloody long")]
         public void It_cannot_connect_to_non_existant_database()
         {
             var databaseConnection = new DatabaseConnection("http://10.120.17.75:7475/db/data");
