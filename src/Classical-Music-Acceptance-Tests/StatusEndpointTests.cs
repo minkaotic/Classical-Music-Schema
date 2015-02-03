@@ -6,23 +6,23 @@ using NUnit.Framework;
 
 namespace Classical_Music_Acceptance_Tests
 {
-    [TestFixture]
-    public class StatusEndpointTests
-    {
-        [Test]
-        public void It_should_return_Database_online()
-        {
-            string url = ConfigurationManager.AppSettings["RootUrl"] + "/status";
-            WebRequest request = WebRequest.Create(url);
-            WebResponse response = request.GetResponse();
-            string responseText;
+	[TestFixture]
+	public class StatusEndpointTests
+	{
+		[Test]
+		public void It_should_return_Database_online()
+		{
+			string url = ConfigurationManager.AppSettings["RootUrl"] + "/status";
+			WebRequest request = WebRequest.Create(url);
+			WebResponse response = request.GetResponse();
+			string responseText;
 
-            using (var reader = new System.IO.StreamReader(response.GetResponseStream(), ASCIIEncoding.ASCII))
-            {
-                responseText = reader.ReadToEnd();
-            }
-    
-            Assert.That(responseText, Is.StringContaining("Database: ONLINE"));
-        }
-    }
+			using (var reader = new System.IO.StreamReader(response.GetResponseStream(), ASCIIEncoding.ASCII))
+			{
+				responseText = reader.ReadToEnd();
+			}
+
+			Assert.That(responseText, Is.StringContaining("Database: ONLINE"));
+		}
+	}
 }

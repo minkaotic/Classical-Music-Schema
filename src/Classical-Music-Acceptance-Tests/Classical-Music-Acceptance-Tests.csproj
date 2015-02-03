@@ -73,14 +73,28 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="TechTalk.SpecFlow">
+      <HintPath>..\..\packages\SpecFlow.1.9.0\lib\net35\TechTalk.SpecFlow.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ReleasePageTests.cs" />
+    <Compile Include="Specs\ReleaseIdEndpointSteps.cs" />
+    <Compile Include="Specs\ReleaseIdEndpointStepsDriver.cs" />
     <Compile Include="StatusEndpointTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Specs\ReleaseIdEndpoint.feature.cs">
+      <DependentUpon>ReleaseIdEndpoint.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Specs\ReleaseIdEndpoint.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ReleaseIdEndpoint.feature.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
