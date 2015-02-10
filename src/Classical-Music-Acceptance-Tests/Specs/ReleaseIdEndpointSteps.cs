@@ -7,10 +7,16 @@ namespace Classical_Music_Acceptance_Tests.Specs
 	{
 		private ReleaseIdEndpointStepsDriver _driver;
 
+		[Given(@"The Website is running")]
+		public void GivenTheWebsiteIsRunning()
+		{
+			_driver = new ReleaseIdEndpointStepsDriver();
+			_driver.AssertWebsiteIsRunning();
+		}
+
 		[Given(@"a release exists in the database")]
 		public void GivenAReleaseExistsInTheDatabase()
 		{
-			_driver = new ReleaseIdEndpointStepsDriver();
 			_driver.AddReleaseToDatabase();
 		}
 

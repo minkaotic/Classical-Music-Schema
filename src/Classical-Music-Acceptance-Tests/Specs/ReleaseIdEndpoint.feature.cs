@@ -73,10 +73,12 @@ namespace Classical_Music_Acceptance_Tests.Specs
 #line 7
 this.ScenarioSetup(scenarioInfo);
 #line 8
- testRunner.Given("a release exists in the database", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("The Website is running", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 9
- testRunner.When("I request the release from the endpoint", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("a release exists in the database", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 10
+ testRunner.When("I request the release from the endpoint", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 11
  testRunner.Then("I should see its release title", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

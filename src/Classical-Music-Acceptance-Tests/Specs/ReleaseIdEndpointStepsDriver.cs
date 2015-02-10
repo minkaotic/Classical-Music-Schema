@@ -5,10 +5,22 @@ namespace Classical_Music_Acceptance_Tests.Specs
 {
 	public class ReleaseIdEndpointStepsDriver
 	{
+		public void AssertWebsiteIsRunning()
+		{
+			var websiteUrl = "http://classical-api.local/status";
+			AssertHttpStatusCodeIsOkFor(websiteUrl);
+		}
+
 		public void AddReleaseToDatabase()
 		{
 			AssertDatabaseApiIsLive();
 			AssertReleaseExistsInDatabase();
+		}
+
+		private void AssertDatabaseApiIsLive()
+		{
+			var databaseUrl = "http://localhost:7474/db/data/";
+			AssertHttpStatusCodeIsOkFor(databaseUrl);
 		}
 
 		private void AssertReleaseExistsInDatabase()
@@ -16,10 +28,10 @@ namespace Classical_Music_Acceptance_Tests.Specs
 			throw new System.NotImplementedException();
 		}
 
-		private void AssertDatabaseApiIsLive()
+		private void AssertHttpStatusCodeIsOkFor(string url)
 		{
-			var webRequest = (HttpWebRequest)WebRequest.Create("http://localhost:7474/db/data/");
-			var webResponse = (HttpWebResponse)webRequest.GetResponse();
+			var webRequest = (HttpWebRequest) WebRequest.Create(url);
+			var webResponse = (HttpWebResponse) webRequest.GetResponse();
 			var statusCode = webResponse.StatusCode;
 			Assert.That(statusCode, Is.EqualTo(HttpStatusCode.OK));
 		}
