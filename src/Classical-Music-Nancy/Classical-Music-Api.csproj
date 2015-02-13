@@ -47,9 +47,6 @@
     <Reference Include="Nancy">
       <HintPath>..\..\packages\Nancy.0.23.2\lib\net40\Nancy.dll</HintPath>
     </Reference>
-    <Reference Include="Nancy.Bootstrappers.StructureMap">
-      <HintPath>..\..\packages\Nancy.Bootstrappers.StructureMap.0.23.2\lib\net40\Nancy.Bootstrappers.StructureMap.dll</HintPath>
-    </Reference>
     <Reference Include="Nancy.Hosting.Aspnet">
       <HintPath>..\..\packages\Nancy.Hosting.Aspnet.0.23.2\lib\net40\Nancy.Hosting.Aspnet.dll</HintPath>
       <Private>True</Private>
@@ -59,12 +56,6 @@
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\..\packages\Newtonsoft.Json.6.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="StructureMap">
-      <HintPath>..\..\packages\structuremap.3.0.5.130\lib\net40\StructureMap.dll</HintPath>
-    </Reference>
-    <Reference Include="StructureMap.Net4">
-      <HintPath>..\..\packages\structuremap.3.0.5.130\lib\net40\StructureMap.Net4.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data.DataSetExtensions" />
