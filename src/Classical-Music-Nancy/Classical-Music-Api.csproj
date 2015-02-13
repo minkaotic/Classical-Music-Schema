@@ -83,8 +83,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Database\ReleaseData.cs" />
-    <Compile Include="Database\DatabaseConnection.cs" />
+    <Compile Include="Database\DbServer.cs" />
     <Compile Include="Nancy\Bootstrapper.cs" />
+    <Compile Include="Nancy\Release.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Nancy\ReleasePageModule.cs" />
     <Compile Include="Nancy\StatusPageModule.cs" />

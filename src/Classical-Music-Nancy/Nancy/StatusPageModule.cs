@@ -13,8 +13,8 @@ namespace Classical_Music_Nancy
 
 		private static string StatusPageResponse()
 		{
-			var databaseConnection = new DatabaseConnection("http://10.120.17.75:7474/db/data");
-			if (databaseConnection.ConnectToDb())
+			var dbServer = new DbServer("http://10.120.17.75:7474/db/data");
+			if (dbServer.Connect())
 			{
 				return DbOnline() + "<p/>" + OutputVersionNumber();
 			}
