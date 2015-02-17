@@ -8,7 +8,7 @@ namespace Classical_Music_Nancy.Data
 	{
 		private string _dbUri = "http://10.120.17.75:7474/db/data";
 
-		public Release.Release GetFromDb()
+		public Model.Release GetFromDb(int releaseId)
 		{
 			var client = new GraphClient(new Uri(_dbUri));
 			client.Connect();
@@ -16,7 +16,7 @@ namespace Classical_Music_Nancy.Data
 			var query = client
 				.Cypher
 				.Match("(node:Release)")
-				.Return(node => node.As<Release.Release>());
+				.Return(node => node.As<Model.Release>());
 
 			var queryResults = query.Results;
 			if (queryResults.Any())
@@ -30,6 +30,6 @@ namespace Classical_Music_Nancy.Data
 
 	public interface IReleaseRepository
 	{
-		Release.Release GetFromDb();
+		Model.Release GetFromDb(int releaseId);
 	}
 }

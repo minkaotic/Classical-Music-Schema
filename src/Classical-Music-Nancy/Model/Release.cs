@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Classical_Music_Nancy.Release
+namespace Classical_Music_Nancy.Model
 {
 	public class Release
 	{

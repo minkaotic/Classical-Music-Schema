@@ -1,5 +1,5 @@
-﻿using Classical_Music_Nancy;
-using Classical_Music_Nancy.Data;
+﻿using Classical_Music_Nancy.Data;
+using Classical_Music_Nancy.Model;
 using Classical_Music_Nancy.Release;
 using Moq;
 using NUnit.Framework;
@@ -10,17 +10,54 @@ namespace Classical_Music_Unit_Tests
 	[TestFixture]
 	class ReleasePageModuleTest
 	{
-		[Test]
-		public void Returns_release_data_which_is_passed_in()
-		{
-			var releaseDataMock = new Mock<IReleaseRepository>();
-			releaseDataMock.Setup(rdm => rdm.GetFromDb()).Returns(new Release { Title = "Test Title" });
-			var releasePageModule = new ReleaseModule(releaseDataMock.Object);
-			var testingBootstrapper = new ConfigurableBootstrapper(with => with.Module(releasePageModule));
-			var browser = new Browser(testingBootstrapper, to => to.Accept("application/json"));
-			var responseText = browser.Get("/release/1", with => with.HttpRequest()).Body.AsString();
+		private Browser _browser;
+		private ReleaseRepositoryMock _releaseRepository;
 
-			Assert.That(responseText, Is.StringContaining("Test Title"));
+		[SetUp]
+		public void SetUp()
+		{
+			_releaseRepository = new ReleaseRepositoryMock();
+
+			_browser = new Browser(x =>
+			{
+				x.Module<ReleaseModule>();
+				x.Dependency(_releaseRepository);
+			});
+		}
+
+		[Test]
+		public void Release_1_returns_title()
+		{
+			var response = _browser.Get(string.Format("/release/1"), with =>
+			{
+				with.Header("Accept", "application/json");
+			}); 
+			
+			Assert.That(response.Body.AsString(), Is.EqualTo("{\"title\":\"Test Title\"}"));
+		}
+
+		[Test]
+		public void Release_2_returns_title()
+		{
+			var response = _browser.Get(string.Format("/release/2"), with =>
+			{
+				with.Header("Accept", "application/json");
+			});
+
+			Assert.That(response.Body.AsString(), Is.EqualTo("{\"title\":\"Another Test Title\"}"));
+		}
+
+		internal class ReleaseRepositoryMock : IReleaseRepository
+		{
+			public Release GetFromDb(int releaseId)
+			{
+				if (releaseId == 1)
+				{
+					return new Release() { Title = "Test Title" };
+				}
+
+				return new Release() { Title = "Another Test Title" };
+			}
 		}
 	}
 }
