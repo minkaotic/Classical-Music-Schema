@@ -2,13 +2,13 @@
 using System.Linq;
 using Neo4jClient;
 
-namespace Classical_Music_Nancy.Database
+namespace Classical_Music_Nancy.Data
 {
-	public class ReleaseData : IReleaseData
+	public class ReleaseRepository : IReleaseRepository
 	{
 		private string _dbUri = "http://10.120.17.75:7474/db/data";
 
-		public Release GetFromDb()
+		public Release.Release GetFromDb()
 		{
 			var client = new GraphClient(new Uri(_dbUri));
 			client.Connect();
@@ -16,7 +16,7 @@ namespace Classical_Music_Nancy.Database
 			var query = client
 				.Cypher
 				.Match("(node:Release)")
-				.Return(node => node.As<Release>());
+				.Return(node => node.As<Release.Release>());
 
 			var queryResults = query.Results;
 			if (queryResults.Any())
@@ -28,8 +28,8 @@ namespace Classical_Music_Nancy.Database
 		}
 	}
 
-	public interface IReleaseData
+	public interface IReleaseRepository
 	{
-		Release GetFromDb();
+		Release.Release GetFromDb();
 	}
 }

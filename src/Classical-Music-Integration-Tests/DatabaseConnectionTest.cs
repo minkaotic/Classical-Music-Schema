@@ -1,5 +1,7 @@
 ﻿using Classical_Music_Nancy;
-using Classical_Music_Nancy.Database;
+using Classical_Music_Nancy.Data;
+using Classical_Music_Nancy.Release;
+using Classical_Music_Nancy.Status;
 using NUnit.Framework;
 
 namespace Classical_Music_Integration_Tests
@@ -12,22 +14,26 @@ namespace Classical_Music_Integration_Tests
 		[TestFixtureSetUp]
 		public void Set_up()
 		{
-			var releaseData = new ReleaseData();
+			var releaseData = new ReleaseRepository();
 			_release = releaseData.GetFromDb();
 		}
 
 		[Test]
-		public void It_can_connect_to_the_database()
+		public void Can_connect_to_the_database()
 		{
-			var databaseConnection = new DbServer("http://10.120.17.75:7474/db/data");
-			Assert.That(databaseConnection.Connect(), Is.True);
+			var database = new DbServer("http://10.120.17.75:7474/db/data");
+			database.Connect();
+
+			Assert.That(database.Status, Is.EqualTo("ONLINE"));
 		}
 
-		[Test, Ignore("takes too bloody long")]
-		public void It_cannot_connect_to_non_existant_database()
+		[Test, Ignore("takes too long")]
+		public void Cannot_connect_to_non_existant_database()
 		{
-			var databaseConnection = new DbServer("http://10.120.17.75:7475/db/data");
-			Assert.That(databaseConnection.Connect(), Is.False);
+			var database = new DbServer("http://10.120.17.75:7475/db/data");
+			database.Connect();
+
+			Assert.That(database.Status, Is.Not.EqualTo("ONLINE"));
 		}
 
 		[Test]

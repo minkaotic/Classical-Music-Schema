@@ -82,13 +82,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Database\ReleaseData.cs" />
-    <Compile Include="Database\DbServer.cs" />
+    <Compile Include="Data\ReleaseRepository.cs" />
+    <Compile Include="Status\DbServer.cs" />
     <Compile Include="Nancy\Bootstrapper.cs" />
-    <Compile Include="Nancy\Release.cs" />
+    <Compile Include="Release\Release.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Nancy\ReleasePageModule.cs" />
-    <Compile Include="Nancy\StatusPageModule.cs" />
+    <Compile Include="Release\ReleaseModule.cs" />
+    <Compile Include="Status\StatusModule.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

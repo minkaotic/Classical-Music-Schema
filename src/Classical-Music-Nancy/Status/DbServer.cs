@@ -1,30 +1,30 @@
 ﻿using System;
 using Neo4jClient;
 
-namespace Classical_Music_Nancy
+namespace Classical_Music_Nancy.Status
 {
 	public class DbServer
 	{
 		private string _dbUrl;
+		public string Status;
 
 		public DbServer(string dbUrl)
 		{
 			_dbUrl = dbUrl;
 		}
 
-		public bool Connect()
+		public void Connect()
 		{
 			try
 			{
 				var client = new GraphClient(new Uri(_dbUrl));
 				client.Connect();
-				return true;
+				Status = "ONLINE";
 			}
 			catch (AggregateException)
 			{
-				return false;
+				Status = "CONNECTION ERROR";
 			}
-
 		}
 	}
 }
