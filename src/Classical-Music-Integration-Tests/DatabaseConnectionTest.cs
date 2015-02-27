@@ -1,7 +1,5 @@
-﻿using Classical_Music_Nancy;
-using Classical_Music_Nancy.Data;
+﻿using Classical_Music_Nancy.Data;
 using Classical_Music_Nancy.Model;
-using Classical_Music_Nancy.Release;
 using Classical_Music_Nancy.Status;
 using NUnit.Framework;
 

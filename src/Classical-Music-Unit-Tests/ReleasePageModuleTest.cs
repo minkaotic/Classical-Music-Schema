@@ -1,7 +1,6 @@
 ﻿using Classical_Music_Nancy.Data;
 using Classical_Music_Nancy.Model;
 using Classical_Music_Nancy.Release;
-using Moq;
 using NUnit.Framework;
 using Nancy.Testing;
 
@@ -47,7 +46,7 @@ namespace Classical_Music_Unit_Tests
 			Assert.That(response.Body.AsString(), Is.EqualTo("{\"title\":\"Another Test Title\"}"));
 		}
 
-		internal class ReleaseRepositoryMock : IReleaseRepository
+		private class ReleaseRepositoryMock : IReleaseRepository
 		{
 			public Release GetFromDb(int releaseId)
 			{
