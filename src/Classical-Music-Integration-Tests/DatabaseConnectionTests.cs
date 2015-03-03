@@ -1,23 +1,11 @@
-﻿using Classical_Music_Nancy.Data;
-using Classical_Music_Nancy.Model;
-using Classical_Music_Nancy.Status;
+﻿using Classical_Music_Nancy.Status;
 using NUnit.Framework;
 
 namespace Classical_Music_Integration_Tests
 {
 	[TestFixture]
-	public class DatabaseConnectionTest
+	public class DatabaseConnectionTests
 	{
-		private Release _release;
-
-		[TestFixtureSetUp]
-		public void Set_up()
-		{
-			var releaseData = new ReleaseRepository();
-			var releaseId = 1;
-			_release = releaseData.GetFromDb(releaseId);
-		}
-
 		[Test]
 		public void Can_connect_to_the_database()
 		{
@@ -35,12 +23,5 @@ namespace Classical_Music_Integration_Tests
 
 			Assert.That(database.Status, Is.Not.EqualTo("ONLINE"));
 		}
-
-		[Test]
-		public void It_can_get_a_release_title_from_the_database()
-		{
-			Assert.That(_release.Title, Is.EqualTo("Mahler: Symphony No. 1"));
-		}
-
 	}
 }

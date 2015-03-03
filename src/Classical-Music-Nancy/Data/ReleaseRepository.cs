@@ -16,6 +16,8 @@ namespace Classical_Music_Nancy.Data
 			var query = client
 				.Cypher
 				.Match("(node:Release)")
+				//TODO:
+				//.Where((Model.Release node) => node.Id == 1)
 				.Return(node => node.As<Model.Release>());
 
 			var queryResults = query.Results;

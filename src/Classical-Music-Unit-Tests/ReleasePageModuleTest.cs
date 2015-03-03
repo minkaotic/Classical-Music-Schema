@@ -32,7 +32,7 @@ namespace Classical_Music_Unit_Tests
 				with.Header("Accept", "application/json");
 			}); 
 			
-			Assert.That(response.Body.AsString(), Is.EqualTo("{\"title\":\"Test Title\"}"));
+			Assert.That(response.Body.AsString(), Is.StringContaining("\"title\":\"Test Title\""));
 		}
 
 		[Test]
@@ -43,7 +43,7 @@ namespace Classical_Music_Unit_Tests
 				with.Header("Accept", "application/json");
 			});
 
-			Assert.That(response.Body.AsString(), Is.EqualTo("{\"title\":\"Another Test Title\"}"));
+			Assert.That(response.Body.AsString(), Is.StringContaining("\"title\":\"Another Test Title\""));
 		}
 
 		private class ReleaseRepositoryMock : IReleaseRepository
