@@ -14,7 +14,8 @@ namespace Classical_Music_Integration_Tests
 		public void Set_up()
 		{
 			var releaseData = new ReleaseRepository();
-			//_release = releaseData.GetFromDb(TODO);
+			var releaseId = 1;
+			_release = releaseData.GetFromDb(releaseId);
 		}
 
 		[Test]
@@ -35,7 +36,7 @@ namespace Classical_Music_Integration_Tests
 			Assert.That(database.Status, Is.Not.EqualTo("ONLINE"));
 		}
 
-		[Test, Ignore("TO DO!")]
+		[Test]
 		public void It_can_get_a_release_title_from_the_database()
 		{
 			Assert.That(_release.Title, Is.EqualTo("Mahler: Symphony No. 1"));
