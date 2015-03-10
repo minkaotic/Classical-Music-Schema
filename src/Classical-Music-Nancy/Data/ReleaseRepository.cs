@@ -16,14 +16,17 @@ namespace Classical_Music_Nancy.Data
 			var query = client
 				.Cypher
 				.Match("(node:Release)")
-				//TODO:
-				//.Where((Model.Release node) => node.Id == 1)
+				/* Ideally would want to narrow it down in query, rather than retrieving ALL nodes,
+				 * but the query line below doesn't issue valid Cypher, so I'm narrowing the results
+				 * down further below instead.*/
+				//.Where((Model.Release node) => node.Id == 2)
 				.Return(node => node.As<Model.Release>());
 
 			var queryResults = query.Results;
 			if (queryResults.Any())
 			{
-				return query.Results.FirstOrDefault();
+				var relevantReleases = query.Results.Where(i => i.Id == releaseId);
+				return relevantReleases.FirstOrDefault();
 			}
 
 			throw new Exception("No releases found in database.");
