@@ -1,5 +1,4 @@
 ﻿using Classical_Music_Nancy.Data;
-using Classical_Music_Nancy.Model;
 using NUnit.Framework;
 
 namespace Classical_Music_Integration_Tests
