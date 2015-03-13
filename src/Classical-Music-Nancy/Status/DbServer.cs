@@ -3,10 +3,10 @@ using Neo4jClient;
 
 namespace Classical_Music_Nancy.Status
 {
-	public class DbServer: IDbServer
+	public class DbServer
 	{
 		private string _dbUrl;
-		public string Status { get; set; }
+		public string Status;
 
 		public DbServer(string dbUrl)
 		{

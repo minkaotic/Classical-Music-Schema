@@ -87,17 +87,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data\IReleaseRepository.cs" />
-    <Compile Include="Data\NoReleaseFoundException.cs" />
     <Compile Include="Data\ReleaseRepository.cs" />
+    <Compile Include="Release\ExampleModule.cs" />
     <Compile Include="Status\DbServer.cs" />
     <Compile Include="Nancy\Bootstrapper.cs" />
     <Compile Include="Model\Release.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Release\ReleaseModule.cs" />
-    <Compile Include="Status\IAssemblyInformation.cs" />
-    <Compile Include="Status\IDbServer.cs" />
-    <Compile Include="Status\IServerInformation.cs" />
     <Compile Include="Status\StatusModule.cs" />
   </ItemGroup>
   <ItemGroup>

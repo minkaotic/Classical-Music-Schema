@@ -78,12 +78,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AssemblyInformationMock.cs" />
-    <Compile Include="DbServerMock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReleaseModuleTests.cs" />
-    <Compile Include="ReleaseRepositoryMock.cs" />
-    <Compile Include="StatusModuleTests.cs" />
+    <Compile Include="ReleasePageModuleTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -5,26 +5,32 @@ namespace Classical_Music_Nancy.Status
 {
 	public class StatusModule : NancyModule
 	{
-		private readonly IDbServer _dbServer;
-		private readonly IAssemblyInformation _assemblyInformation;
-		private readonly IServerInformation _serverInformation;
-
-		public StatusModule(IDbServer dbServer, IAssemblyInformation assemblyInformation, IServerInformation serverInformation)
+		private static readonly DbServer DbServer = new DbServer("http://10.120.17.75:7474/db/data");
+		
+		public StatusModule()
 		{
-			_dbServer = dbServer;
-			_assemblyInformation = assemblyInformation;
-			_serverInformation = serverInformation;
 			Get["/status"] = _ => StatusResponse();
 		}
 
-		private string StatusResponse()
+		private static string StatusResponse()
 		{
-			return "\"serverTime\": \"" +  FormattedServerTime() + "\"";
+			
+			DbServer.Connect();
+			return DbStatus() + "<p/>" + OutputVersionNumber();
 		}
 
-		private string FormattedServerTime()
+		private static string DbStatus()
 		{
-			return _serverInformation.DateTimeInUtc().ToUniversalTime().ToString("yyyy'-'MM'-'dd'T'HH':'mm':'ss'Z'");
+			if (DbServer.Status == "ONLINE")
+			{
+				return "Database: ONLINE";
+			}
+			return "Database: CONNECTION ERROR";
+		}
+
+		private static string OutputVersionNumber()
+		{
+			return "Version: " + Assembly.GetExecutingAssembly().GetName().Version;
 		}
 	}
 }
