@@ -30,9 +30,4 @@ namespace Classical_Music_Nancy.Data
 			throw new Exception("No releases found in database.");
 		}
 	}
-
-	public interface IReleaseRepository
-	{
-		Model.Release GetFromDb(int releaseId);
-	}
 }

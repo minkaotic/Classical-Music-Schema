@@ -79,7 +79,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReleasePageModuleTest.cs" />
+    <Compile Include="RecordingModuleTests.cs" />
+    <Compile Include="ReleaseModuleTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

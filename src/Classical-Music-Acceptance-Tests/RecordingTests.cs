@@ -6,14 +6,14 @@ using NUnit.Framework;
 namespace Classical_Music_Acceptance_Tests
 {
 	[TestFixture]
-	class ReleasePageTests
+	class RecordingTests
 	{
 		private WebResponse _response;
 
 		[TestFixtureSetUp]
 		public void BeforeAll()
 		{
-			string url = ConfigurationManager.AppSettings["RootUrl"] + "/release/1";
+			string url = ConfigurationManager.AppSettings["RootUrl"] + "/recording/1";
 			WebRequest request = WebRequest.Create(url);
 			_response = request.GetResponse();
 		}
@@ -32,7 +32,7 @@ namespace Classical_Music_Acceptance_Tests
 		}
 
 		[Test]
-		public void Returns_a_release_title()
+		public void Returns_a_recording_id()
 		{
 			string responseText;
 
@@ -41,7 +41,7 @@ namespace Classical_Music_Acceptance_Tests
 				responseText = reader.ReadToEnd();
 			}
 
-			Assert.That(responseText, Is.StringContaining(@"""title"":""Mahler: Symphony No. 1"""));
+			Assert.That(responseText, Is.StringContaining("1"));
 		}
 	}
 }

@@ -7,7 +7,7 @@ using Nancy.Testing;
 namespace Classical_Music_Unit_Tests
 {
 	[TestFixture]
-	class ReleasePageModuleTest
+	class ReleaseModuleTest
 	{
 		private Browser _browser;
 		private ReleaseRepositoryMock _releaseRepository;
