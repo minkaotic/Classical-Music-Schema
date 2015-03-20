@@ -31,7 +31,7 @@ namespace Classical_Music_Acceptance_Tests
 			Assert.That(httpStatusCode, Is.EqualTo(HttpStatusCode.OK));
 		}
 
-		[Test]
+		[Test, Ignore("TO DO")]
 		public void Returns_a_recording_id()
 		{
 			string responseText;
