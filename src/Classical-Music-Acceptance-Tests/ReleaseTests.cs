@@ -13,7 +13,7 @@ namespace Classical_Music_Acceptance_Tests
 		[TestFixtureSetUp]
 		public void BeforeAll()
 		{
-			string url = ConfigurationManager.AppSettings["RootUrl"] + "/release/1";
+			string url = ConfigurationManager.AppSettings["RootUrl"] + "/release/741553";
 			WebRequest request = WebRequest.Create(url);
 			_response = request.GetResponse();
 		}

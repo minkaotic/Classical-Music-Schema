@@ -16,14 +16,14 @@ namespace Classical_Music_Nancy.Data
 			var query = client
 				.Cypher
 				.Match("(node:Release)")
-				.Where("id(node)={param}")
-				.WithParam("param", releaseId)
+				//.Where((Model.Release node) => node.SevenDigitalId == releaseId)
+				//.Where((Model.Release node) => node.Id == releaseId)
 				.Return(node => node.As<Model.Release>());
 
 			var queryResults = query.Results;
 			if (queryResults.Any())
 			{
-				var relevantReleases = query.Results;
+				var relevantReleases = query.Results.Where(i => i.SevenDigitalId == releaseId);
 				return relevantReleases.FirstOrDefault();
 			}
 
