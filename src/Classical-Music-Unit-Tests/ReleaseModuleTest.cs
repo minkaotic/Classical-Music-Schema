@@ -32,7 +32,7 @@ namespace Classical_Music_Unit_Tests
 				with.Header("Accept", "application/json");
 			}); 
 			
-			Assert.That(response.Body.AsString(), Is.StringContaining("\"title\":\"Test Name\""));
+			Assert.That(response.Body.AsString(), Is.StringContaining("\"title\":\"Test Title\""));
 		}
 
 		[Test]
@@ -43,7 +43,7 @@ namespace Classical_Music_Unit_Tests
 				with.Header("Accept", "application/json");
 			});
 
-			Assert.That(response.Body.AsString(), Is.StringContaining("\"title\":\"Another Test Name\""));
+			Assert.That(response.Body.AsString(), Is.StringContaining("\"title\":\"Another Test Title\""));
 		}
 
 		private class ReleaseRepositoryMock : IReleaseRepository
@@ -52,10 +52,10 @@ namespace Classical_Music_Unit_Tests
 			{
 				if (releaseId == 1)
 				{
-					return new Release() { Name = "Test Name" };
+					return new Release() { Title = "Test Title" };
 				}
 
-				return new Release() { Name = "Another Test Name" };
+				return new Release() { Title = "Another Test Title" };
 			}
 		}
 	}

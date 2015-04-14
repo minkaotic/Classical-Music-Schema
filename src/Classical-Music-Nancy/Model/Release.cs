@@ -5,7 +5,7 @@ namespace Classical_Music_Nancy.Model
 	public class Release
 	{
 		[JsonProperty(PropertyName = "name")]
-		public string Name { get; set; }
+		public string Title { get; set; }
 
 		[JsonProperty(PropertyName = "sd_id")]
 		public int SevenDigitalId { get; set; }

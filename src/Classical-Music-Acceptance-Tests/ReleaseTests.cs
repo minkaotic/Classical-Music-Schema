@@ -41,7 +41,7 @@ namespace Classical_Music_Acceptance_Tests
 				responseText = reader.ReadToEnd();
 			}
 
-			Assert.That(responseText, Is.StringContaining(@"""title"":""Mahler: Symphony No. 1"""));
+			Assert.That(responseText, Is.StringContaining(@"""title"":""Gustav Mahler: Der Titan Symphonie Nr. 1"""));
 		}
 	}
 }
