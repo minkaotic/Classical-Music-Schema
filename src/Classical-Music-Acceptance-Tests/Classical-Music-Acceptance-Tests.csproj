@@ -79,7 +79,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="RecordingTests.cs" />
     <Compile Include="ReleaseTests.cs" />
     <Compile Include="StatusEndpointTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

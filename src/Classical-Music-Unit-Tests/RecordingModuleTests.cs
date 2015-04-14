@@ -1,7 +1,6 @@
 ﻿using Classical_Music_Nancy.Data;
 using Classical_Music_Nancy.Endpoints.Recording;
 using Classical_Music_Nancy.Model;
-using Classical_Music_Nancy.Release;
 using NUnit.Framework;
 using Nancy.Testing;
 
