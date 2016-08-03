@@ -1,6 +1,6 @@
 # Classical-Music-Schema
 
-Project to create a proof-of-concept API which aims to better supports the complex metadata schema of classical music. 
+Project to create a proof-of-concept API aiming to better support the complex (compared to pop music) metadata schema of classical music. 
 
 Built on top of a neo4j Graph database - the repo containing the metadata sample used and Cypher import script can be found here (accessible only within the 7digital organisation): https://github.com/7digital/Classical-Music-Data-Import
 
